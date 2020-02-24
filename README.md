@@ -33,3 +33,16 @@ cout<<"Minimum number is: "<< mn << endl;
 return 0;
 
 }
+  Time Complexity
+T(n) = T(floor(n/2)) + T(ceil(n/2)) + 2  
+  T(2) = 1
+  T(1) = 0
+If n is a power of 2, then we can write T(n) as:
+
+   T(n) = 2T(n/2) + 2 
+After solving above recursion, we get
+
+  T(n)  = 3n/2 -2 
+Thus, the approach does 3n/2 -2 comparisons if n is a power of 2. And it does more than 3n/2 -2 comparisons if n is not a power of 2.
+
+
